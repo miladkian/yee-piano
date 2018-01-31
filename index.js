@@ -4,10 +4,12 @@ var midi = require('midi');
 var input = new midi.input();
 
 // Count the available input ports.
-input.getPortCount();
+var test = input.getPortCount();
+console.log("port count" + test);
 
 // Get the name of a specified input port.
-input.getPortName(0);
+var test 2 = input.getPortName(0);
+console.log("port count" + test2);
 
 // Configure a callback.
 input.on('message', function(deltaTime, message) {
