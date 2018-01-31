@@ -159,9 +159,10 @@ dev.setColor(Math.floor(Math.random() * (200 - 50 + 1)) + 50,200);
   // https://www.cs.cf.ac.uk/Dave/Multimedia/node158.html has some helpful
   // information interpreting the messages.
   if(message != '254'){
-  	if(message[2] != 0)
+  	if(message[2] != 0){
  console.log('m:' + message[2] );
 dev.setColor(Math.floor(Math.random() * (300 - 50 + 1)) + 50,Math.floor(Math.random() * (300 - 50 + 1)) + 50);
+}
  }
   
  
