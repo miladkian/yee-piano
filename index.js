@@ -14,18 +14,7 @@ var test2 = input.getPortName(0);
 console.log("port count" + test2);
 
 // Configure a callback.
-input.on('message', function(deltaTime, message) {
-  // The message is an array of numbers corresponding to the MIDI bytes:
-  //   [status, data1, data2]
-  // https://www.cs.cf.ac.uk/Dave/Multimedia/node158.html has some helpful
-  // information interpreting the messages.
-  if(message != '254'){
-  	if(message[2] != 0)
- console.log('m:' + message[2] );
- }
-  
- 
-});
+
 
 // Open the first available input port.
 input.openPort(1);
@@ -155,6 +144,29 @@ var handler = {
 	console.log("accesseory reachable");
 
 	console.log("dev connected " + dev.did + " " + dev.connected);	
+	console.log('------------------------------------')
+	console.log('------------------------------------')
+	console.log(dev)
+	console.log('------------------------------------')
+	console.log('------------------------------------')
+
+	dev.setBright(120);
+	dev.setColor(120,200);
+
+	input.on('message', function(deltaTime, message) {
+  // The message is an array of numbers corresponding to the MIDI bytes:
+  //   [status, data1, data2]
+  // https://www.cs.cf.ac.uk/Dave/Multimedia/node158.html has some helpful
+  // information interpreting the messages.
+  if(message != '254'){
+  	if(message[2] != 0)
+ console.log('m:' + message[2] );
+
+dev.setColor(Math.floor(Math.random() * (200 - 50 + 1)) + 50;,200);
+ }
+  
+ 
+});
 	//var accessory = dev.ctx;
 	//accessory.updateReachability(true);	
     },

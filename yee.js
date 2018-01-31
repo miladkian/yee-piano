@@ -550,12 +550,12 @@ exports.YeeAgent = function(ip, handler){
         dev = this.devices[did]; 
    
         if (data[0] == 0x43 && data[1] == 0x45) { 
-            if (data[2] == 1)
-                dev.propChangeCb(dev, 'power', 1); 
-            else 
-                dev.propChangeCb(dev, 'power', 0);
+            // if (data[2] == 1)
+            //    // dev.propChangeCb(dev, 'power', 1); 
+            // else 
+            //     dev.propChangeCb(dev, 'power', 0);
 
-            dev.propChangeCb(dev, 'bright', data[8]);
+          //  dev.propChangeCb(dev, 'bright', data[8]);
 
             console.log("power: " + data[2] + " bright: " + data[8]);
         }   
