@@ -166,7 +166,7 @@ dev.setColor(Math.floor(Math.random() * (200 - 50 + 1)) + 50,200);
 dev.setBright(200);
 setTimeout(function(){
 dev.setBright(1);
-},10)
+},500)
  }
   
  
