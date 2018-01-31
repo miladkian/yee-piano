@@ -150,9 +150,9 @@ var handler = {
 	console.log('------------------------------------')
 	console.log('------------------------------------')
 
-	dev.setBright(120);
-	dev.setColor(120,200);
-
+	dev.setBright(1);
+	//dev.setColor(120,200);
+dev.setColor(Math.floor(Math.random() * (200 - 50 + 1)) + 50,200);
 	input.on('message', function(deltaTime, message) {
   // The message is an array of numbers corresponding to the MIDI bytes:
   //   [status, data1, data2]
@@ -162,7 +162,11 @@ var handler = {
   	if(message[2] != 0)
  console.log('m:' + message[2] );
 
-dev.setColor(Math.floor(Math.random() * (200 - 50 + 1)) + 50,200);
+
+dev.setBright(200);
+setTimeout(function(){
+dev.setBright(1);
+},10)
  }
   
  
