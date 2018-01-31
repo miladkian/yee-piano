@@ -162,7 +162,7 @@ var handler = {
   	if(message[2] != 0)
  console.log('m:' + message[2] );
 
-dev.setColor(Math.floor(Math.random() * (200 - 50 + 1)) + 50;,200);
+dev.setColor(Math.floor(Math.random() * (200 - 50 + 1)) + 50,200);
  }
   
  
