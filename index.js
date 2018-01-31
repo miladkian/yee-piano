@@ -163,7 +163,7 @@ dev.setColor(Math.floor(Math.random() * (200 - 50 + 1)) + 50,200);
  console.log('m:' + message[2] );
 
 
-dev.setBright(200);
+dev.setBright(12);
 setTimeout(function(){
 dev.setBright(1);
 },500)
