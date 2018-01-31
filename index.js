@@ -26,7 +26,7 @@ input.on('message', function(deltaTime, message) {
 });
 
 // Open the first available input port.
-input.openPort(0);
+input.openPort(1);
 
 // Sysex, timing, and active sensing messages are ignored
 // by default. To enable these message types, pass false for
