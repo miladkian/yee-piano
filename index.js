@@ -150,7 +150,7 @@ var handler = {
 	console.log('------------------------------------')
 	console.log('------------------------------------')
 
-	dev.setBright(1);
+	//dev.setBright(1);
 	//dev.setColor(120,200);
 dev.setColor(Math.floor(Math.random() * (200 - 50 + 1)) + 50,200);
 	input.on('message', function(deltaTime, message) {
@@ -161,12 +161,7 @@ dev.setColor(Math.floor(Math.random() * (200 - 50 + 1)) + 50,200);
   if(message != '254'){
   	if(message[2] != 0)
  console.log('m:' + message[2] );
-
-
-dev.setBright(12);
-setTimeout(function(){
-dev.setBright(1);
-},500)
+dev.setColor(Math.floor(Math.random() * (300 - 50 + 1)) + 50,Math.floor(Math.random() * (300 - 50 + 1)) + 50);
  }
   
  
